@@ -1,0 +1,33 @@
+{
+  "applications": "*",
+  "changelogDate": "20220221214328",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "livraison",
+  "fields": [
+    {
+      "fieldName": "quartier",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "dateLivraison",
+      "fieldType": "LocalDate"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Livraison",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "commande",
+      "otherEntityRelationshipName": "livraison",
+      "ownerSide": true,
+      "relationshipName": "commande",
+      "relationshipType": "one-to-one"
+    }
+  ],
+  "service": "serviceImpl"
+}

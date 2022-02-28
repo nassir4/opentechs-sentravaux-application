@@ -1,0 +1,32 @@
+{
+  "applications": "*",
+  "changelogDate": "20220221214323",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "metier",
+  "fields": [
+    {
+      "fieldName": "nom",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Metier",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "ouvrier",
+      "otherEntityRelationshipName": "metier",
+      "relationshipName": "ouvrier",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceImpl"
+}

@@ -1,0 +1,41 @@
+{
+  "applications": "*",
+  "changelogDate": "20220221214331",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "devis",
+  "fields": [
+    {
+      "fieldName": "dateDevis",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "manoeuvre",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "sommeTotal",
+      "fieldType": "Integer"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Devis",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "devis",
+      "otherEntityRelationshipName": "devis",
+      "relationshipName": "ouvrier",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "client",
+      "otherEntityRelationshipName": "devis",
+      "relationshipName": "client",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceImpl"
+}

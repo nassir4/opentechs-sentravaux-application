@@ -1,0 +1,26 @@
+{
+  "sentravauxV1App": {
+    "ouvrier": {
+      "home": {
+        "title": "Ouvriers",
+        "refreshListLabel": "Actualiser la liste",
+        "createLabel": "Créer un nouveau Ouvrier",
+        "createOrEditLabel": "Créer ou éditer un Ouvrier",
+        "notFound": "Aucun Ouvrier trouvé"
+      },
+      "created": "Un nouveau Ouvrier a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Ouvrier avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Ouvrier avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Etes-vous certain de vouloir supprimer le Ouvrier {{ id }} ?"
+      },
+      "detail": {
+        "title": "Ouvrier"
+      },
+      "id": "ID",
+      "telephone": "Telephone",
+      "user": "User",
+      "adresse": "Adresse"
+    }
+  }
+}

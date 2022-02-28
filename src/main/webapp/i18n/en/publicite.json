@@ -1,0 +1,28 @@
+{
+  "sentravauxV1App": {
+    "publicite": {
+      "home": {
+        "title": "Publicites",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Publicite",
+        "createOrEditLabel": "Create or edit a Publicite",
+        "notFound": "No Publicites found"
+      },
+      "created": "A new Publicite is created with identifier {{ param }}",
+      "updated": "A Publicite is updated with identifier {{ param }}",
+      "deleted": "A Publicite is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Publicite {{ id }}?"
+      },
+      "detail": {
+        "title": "Publicite"
+      },
+      "id": "ID",
+      "image": "Image",
+      "video": "Video",
+      "description": "Description",
+      "statut": "Statut",
+      "admin": "Admin"
+    }
+  }
+}

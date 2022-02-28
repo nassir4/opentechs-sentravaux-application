@@ -1,0 +1,166 @@
+entity Admin{
+	telephone Integer required,
+}
+entity Ouvrier{
+	telephone Integer required,
+}
+entity Client{
+	telephone Integer required,
+}
+entity Adresse {
+	region String required,
+    departement String required,
+    commune String required,
+}
+
+entity Annonce {
+	titre String required,
+	statut Boolean,
+    description String required,
+    disponibilite String required,
+    createdAt LocalDate
+}
+entity Media{
+	image ImageBlob,
+    video Blob
+}
+entity Metier{
+	nom String required,
+    description String
+}
+// an ignored comment
+/** not an ignored comment */
+
+entity Categorie{
+	nomCategorie String required,
+    description String
+}
+entity Produit{
+	nom String required,
+    quantite Integer required,
+    prix Integer required,
+    photo ImageBlob required,
+    createdAt LocalDate
+}
+entity Commande{
+	quantiteTotal Integer,
+    prixTotal Integer,
+    createdAt LocalDate
+}
+entity LigneCommande{
+	quantite Integer,
+    prix Integer,
+}
+entity Livraison{
+	quartier String required,
+    dateLivraison LocalDate
+}
+entity Publicite{
+	image ImageBlob,
+    video Blob,
+    description String
+    statut Boolean
+}
+entity Message{
+	message String,
+}
+entity Devis{
+	dateDevis LocalDate,
+    manoeuvre Integer,
+    sommeTotal Integer
+}
+/**
+ * The Employee entity.
+ */
+ //Heritage de l'admin
+ relationship OneToOne {
+ 	Admin{user} to User
+ }
+ //Heritage du client
+  relationship OneToOne {
+ 	Client{user} to User
+ }
+ //heritage de l'ouvrier
+  relationship OneToOne {
+ 	Ouvrier{user} to User
+ }
+ //Message envoyer/recu par l'ouvrier
+  relationship ManyToOne {
+ 	Message{ouvrier} to Ouvrier
+ }
+ //Message envoyer/recu par le client
+   relationship ManyToOne {
+ 	Message{client} to Client
+ }
+ //Piece joint dans le message
+   relationship ManyToOne {
+ 	Message{media} to Media
+ }
+ //Publicité effectuée par l'admin
+ relationship ManyToOne{
+ 	Publicite{admin} to Admin
+ }
+ //livraison des commandes
+ relationship OneToOne{
+ 	Livraison{commande} to Commande
+ }
+ //les lignes de commande
+ relationship ManyToOne{
+ 	LigneCommande{commande} to Commande
+ }
+//Les differents produits dans un ligne commande
+ relationship ManyToOne{
+ 	LigneCommande{produit} to Produit
+ }
+ //Les commandes effectuées par le client
+ relationship ManyToOne{
+ 	Commande{client} to Client
+ }
+ //Les commandes effectuées par l'ouvrier
+relationship ManyToOne{
+	Commande{ouvrier} to Ouvrier
+}
+//l'adresse de l'ouvrier
+relationship ManyToOne {
+	Ouvrier{adresse} to Adresse
+}
+//l'adresse du client
+relationship ManyToOne {
+	Client{adresse} to Adresse
+}
+//Metier de l'ouvrier
+relationship ManyToOne{
+	Metier{ouvrier} to Ouvrier  
+}
+//Annonce de l'ouvrier
+relationship ManyToOne{
+	Annonce{ouvrier} to Ouvrier
+}
+//Categorie d'un produit
+relationship ManyToOne {
+	Produit{categorie} to Categorie
+}
+//Pieces jointes d'une annonce
+relationship ManyToOne {
+	Annonce{media} to Media
+}
+//Devis Ouvrier
+relationship ManyToOne{
+	Devis{ouvrier} to Devis
+}
+//Devis envoyer au client
+relationship ManyToOne{
+	Devis{client} to Client
+}
+// Set pagination options
+paginate Commande, Annonce, Metier, Adresse, Produit,
+Categorie, Livraison, Devis, Publicite, Client, Ouvrier, Admin, Message with pagination
+
+// Use Data Transfer Objects (DTO)
+// dto * with mapstruct
+dto * with mapstruct
+// Set service options to all except few
+service all with serviceImpl 
+
+// Set an angular suffix
+// angularSuffix * with mySuffix

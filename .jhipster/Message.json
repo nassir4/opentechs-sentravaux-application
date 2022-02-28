@@ -1,0 +1,39 @@
+{
+  "applications": "*",
+  "changelogDate": "20220221214330",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "message",
+  "fields": [
+    {
+      "fieldName": "message",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Message",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "ouvrier",
+      "otherEntityRelationshipName": "message",
+      "relationshipName": "ouvrier",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "client",
+      "otherEntityRelationshipName": "message",
+      "relationshipName": "client",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "media",
+      "otherEntityRelationshipName": "message",
+      "relationshipName": "media",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceImpl"
+}

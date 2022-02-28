@@ -1,0 +1,28 @@
+{
+  "sentravauxV1App": {
+    "publicite": {
+      "home": {
+        "title": "Publicites",
+        "refreshListLabel": "Actualiser la liste",
+        "createLabel": "Créer un nouveau Publicite",
+        "createOrEditLabel": "Créer ou éditer un Publicite",
+        "notFound": "Aucun Publicite trouvé"
+      },
+      "created": "Un nouveau Publicite a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Publicite avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Publicite avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Etes-vous certain de vouloir supprimer le Publicite {{ id }} ?"
+      },
+      "detail": {
+        "title": "Publicite"
+      },
+      "id": "ID",
+      "image": "Image",
+      "video": "Video",
+      "description": "Description",
+      "statut": "Statut",
+      "admin": "Admin"
+    }
+  }
+}

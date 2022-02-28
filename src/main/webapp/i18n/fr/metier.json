@@ -1,0 +1,26 @@
+{
+  "sentravauxV1App": {
+    "metier": {
+      "home": {
+        "title": "Metiers",
+        "refreshListLabel": "Actualiser la liste",
+        "createLabel": "Créer un nouveau Metier",
+        "createOrEditLabel": "Créer ou éditer un Metier",
+        "notFound": "Aucun Metier trouvé"
+      },
+      "created": "Un nouveau Metier a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Metier avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Metier avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Etes-vous certain de vouloir supprimer le Metier {{ id }} ?"
+      },
+      "detail": {
+        "title": "Metier"
+      },
+      "id": "ID",
+      "nom": "Nom",
+      "description": "Description",
+      "ouvrier": "Ouvrier"
+    }
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "applications": "*",
+  "changelogDate": "20220221214326",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "commande",
+  "fields": [
+    {
+      "fieldName": "quantiteTotal",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "prixTotal",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "createdAt",
+      "fieldType": "LocalDate"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Commande",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "client",
+      "otherEntityRelationshipName": "commande",
+      "relationshipName": "client",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "ouvrier",
+      "otherEntityRelationshipName": "commande",
+      "relationshipName": "ouvrier",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceImpl"
+}

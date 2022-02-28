@@ -1,0 +1,26 @@
+{
+  "applications": "*",
+  "changelogDate": "20220221214324",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "categorie",
+  "fields": [
+    {
+      "fieldName": "nomCategorie",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "javadoc": "not an ignored comment",
+  "jpaMetamodelFiltering": false,
+  "name": "Categorie",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceImpl"
+}

@@ -1,0 +1,29 @@
+{
+  "applications": "*",
+  "changelogDate": "20220221214317",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "admin",
+  "fields": [
+    {
+      "fieldName": "telephone",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Admin",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "user",
+      "otherEntityRelationshipName": "admin",
+      "ownerSide": true,
+      "relationshipName": "user",
+      "relationshipType": "one-to-one"
+    }
+  ],
+  "service": "serviceImpl"
+}

@@ -1,0 +1,53 @@
+{
+  "applications": "*",
+  "changelogDate": "20220221214321",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "annonce",
+  "fields": [
+    {
+      "fieldName": "titre",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "statut",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "disponibilite",
+      "fieldType": "Disponiblite",
+      "fieldValidateRules": ["required"],
+      "fieldValues": "LUNDI,MARDI,MERCREDI,JEUDI,VENDREDI,SAMEDI,DIMANCHE"
+    },
+    {
+      "fieldName": "imageEnAvant",
+      "fieldType": "byte[]",
+      "fieldTypeBlobContent": "image",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "createdAt",
+      "fieldType": "LocalDate"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Annonce",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "ouvrier",
+      "otherEntityRelationshipName": "annonce",
+      "relationshipName": "ouvrier",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceImpl"
+}

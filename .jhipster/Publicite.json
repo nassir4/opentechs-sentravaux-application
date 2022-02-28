@@ -1,0 +1,41 @@
+{
+  "applications": "*",
+  "changelogDate": "20220221214329",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "publicite",
+  "fields": [
+    {
+      "fieldName": "image",
+      "fieldType": "byte[]",
+      "fieldTypeBlobContent": "image"
+    },
+    {
+      "fieldName": "video",
+      "fieldType": "byte[]",
+      "fieldTypeBlobContent": "any"
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "statut",
+      "fieldType": "Boolean"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Publicite",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "admin",
+      "otherEntityRelationshipName": "publicite",
+      "relationshipName": "admin",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceImpl"
+}

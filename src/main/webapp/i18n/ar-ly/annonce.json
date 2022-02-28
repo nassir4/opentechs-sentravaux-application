@@ -1,0 +1,30 @@
+{
+  "sentravauxV1App": {
+    "annonce": {
+      "home": {
+        "title": "Annonces",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Annonce",
+        "createOrEditLabel": "Create or edit a Annonce",
+        "notFound": "No Annonces found"
+      },
+      "created": "A new Annonce is created with identifier {{ param }}",
+      "updated": "A Annonce is updated with identifier {{ param }}",
+      "deleted": "A Annonce is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Annonce {{ id }}?"
+      },
+      "detail": {
+        "title": "Annonce"
+      },
+      "id": "ID",
+      "titre": "Titre",
+      "statut": "Statut",
+      "description": "Description",
+      "disponibilite": "Disponibilite",
+      "imageEnAvant": "Image En Avant",
+      "createdAt": "Created At",
+      "ouvrier": "Ouvrier"
+    }
+  }
+}

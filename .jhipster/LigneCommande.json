@@ -1,0 +1,37 @@
+{
+  "applications": "*",
+  "changelogDate": "20220221214327",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "ligne_commande",
+  "fields": [
+    {
+      "fieldName": "quantite",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "prix",
+      "fieldType": "Integer"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "LigneCommande",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "commande",
+      "otherEntityRelationshipName": "ligneCommande",
+      "relationshipName": "commande",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "produit",
+      "otherEntityRelationshipName": "ligneCommande",
+      "relationshipName": "produit",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceImpl"
+}

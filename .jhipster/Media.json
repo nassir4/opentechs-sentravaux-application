@@ -1,0 +1,33 @@
+{
+  "applications": "*",
+  "changelogDate": "20220221214322",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "media",
+  "fields": [
+    {
+      "fieldName": "image",
+      "fieldType": "byte[]",
+      "fieldTypeBlobContent": "image"
+    },
+    {
+      "fieldName": "video",
+      "fieldType": "byte[]",
+      "fieldTypeBlobContent": "any"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Media",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "annonce",
+      "otherEntityRelationshipName": "media",
+      "relationshipName": "annonce",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceImpl"
+}
